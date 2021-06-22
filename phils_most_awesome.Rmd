@@ -23,7 +23,7 @@ Here I am cleaning up the data
 ```{r}
 
 airline %>%
- filter(Y >= 5 & Y <= 20) %>%
+ filter(Y >= 4 & Y <= 30) %>%
  ggplot() +
  aes(x = Y, y = W) +
  geom_point(size = 1L, colour = "#0c4c8a") +
