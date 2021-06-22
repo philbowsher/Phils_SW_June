@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Import Proc
+Here I am importing some data
+
+```{r}
+library(tidyverse)
+library(haven)
+airline <- read_sas("http://www.principlesofeconometrics.com/sas/airline.sas7bdat", 
+    NULL)
+
+airline
+```
+
+Data wrangle
+Here I am cleaning up the data
+
+& Data Viz
+
+```{r}
+
+airline %>%
+ filter(Y >= 5 & Y <= 20) %>%
+ ggplot() +
+ aes(x = Y, y = W) +
+ geom_point(size = 1L, colour = "#0c4c8a") +
+ theme_minimal()
+
+```
+
